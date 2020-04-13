@@ -21,6 +21,24 @@
     </div>
   </div>
 </div>
+<div id="lwcApp">test</div>
+<script src="https://sksiscool-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
+<script>
+     $Lightning.use("c:LightningOutDemo", function() {
+        $Lightning.createComponent("c:limits", {
+            },
+              "lwcApp",
+              function(cmp) {
+                console.log("LWC component was created");
+                console.log("cmp is"+cmp);
+                // do some stuff
+              }
+          );
+        },
+       'https://sksiscool-dev-ed.lightning.force.com/'
+      );
+</script>
+
 
 </body>
 <% include partials/script %>
