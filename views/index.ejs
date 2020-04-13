@@ -59,14 +59,14 @@
 
 
 <script>
-  $Lightning.use("inbound_new_guest_appointment",
+  $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
       function() {                  // Callback once framework and app load
           $Lightning.createComponent(
               "lightning:flow",    // top-level component of your app
               { },    // attributes to set on the component when created
               "lwcApp",    // the DOM location to insert the component
               function(component) {            // API name of the Flow
-                  component.startFlow("inbound_new_guest_appointment");
+                  component.startFlow("Lightning_Scheduler_Unauthenticated");
               }
           );
       },    'https://vsdemo.force.com/customerportaldemo/'  // Community endpoint
