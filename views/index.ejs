@@ -22,7 +22,7 @@
   </div>
 </div>
 <div id="lwcApp">test</div>
-<script src="https://sksiscool-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
+<!-- <script src="https://sksiscool-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
 <script>
      $Lightning.use("c:LightningOutDemo", function() {
         $Lightning.createComponent("c:stopwatch", {
@@ -31,12 +31,46 @@
               function(cmp) {
                 console.log("LWC component was created");
                 console.log("cmp is"+cmp);
-                // do some stuff
+                
               }
           );
         },
        'https://sks4321-developer-edition.ap8.force.com'
       );
+</script> -->
+
+
+<script src="https://vsdemo.force.com/customerportaldemo/lightning/lightning.out.js"></script>
+<!-- <script>
+     $Lightning.use("c:LightningOutDemo", function() {
+        $Lightning.createComponent("c:appointmentFlow", {
+            },
+              "lwcApp",
+              function(cmp) {
+                console.log("LWC component was created");
+              
+                
+              }
+          );
+        },
+       'https://vsdemo.force.com/customerportaldemo'
+      );
+</script> -->
+
+
+<script>
+  $Lightning.use("inbound_new_guest_appointment",
+      function() {                  // Callback once framework and app load
+          $Lightning.createComponent(
+              "lightning:flow",    // top-level component of your app
+              { },    // attributes to set on the component when created
+              "lwcApp",    // the DOM location to insert the component
+              function(component) {            // API name of the Flow
+                  component.startFlow("inbound_new_guest_appointment");
+              }
+          );
+      },    'https://vsdemo.force.com/customerportaldemo/'  // Community endpoint
+  );
 </script>
 
 
