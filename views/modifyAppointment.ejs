@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+</head>
+<body>
+<% include partials/menu %>
+
+<div class="container-fluid bg-3 text-center">    
+  <h3><%= page %></h3><br>
+  
+</div>
+
+<div id="lwcApp"></div>
+<script src="https://vsdemo.force.com/customerportaldemo/lightning/lightning.out.js"></script>
+<script>
+  $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
+      function() {                  // Callback once framework and app load
+          $Lightning.createComponent(
+              "lightning:flow",    // top-level component of your app
+             { },    // attributes to set on the component when created
+              "lwcApp",    // the DOM location to insert the component
+              function(component) {            // API name of the Flow
+                  component.startFlow("Inbound_Modify_Appointment_Copy");
+             }
+          );
+      },    'https://vsdemo.force.com/customerportaldemo'  // Community endpoint
+  );
+
+  
+
+</script>
+
+</body>
+<% include partials/script %>
+</html>

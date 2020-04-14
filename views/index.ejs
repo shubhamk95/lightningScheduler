@@ -21,11 +21,11 @@
     </div>
   </div>
 </div>
-<div id="lwcApp">test</div>
+<div id="lwcApp"> <button class="btn btn-primary" onclick="hello()">Book Appointment</button></div>
 <!-- <script src="https://sksiscool-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
 <script>
      $Lightning.use("c:LightningOutDemo", function() {
-        $Lightning.createComponent("c:stopwatch", {
+        $Lightning.createComponent("c:flowComponent", {
             },
               "lwcApp",
               function(cmp) {
@@ -40,10 +40,10 @@
 </script> -->
 
 
-<script src="https://vsdemo.force.com/customerportaldemo/lightning/lightning.out.js"></script>
-<!-- <script>
+<!-- <script src="https://vsdemo.force.com/customerportaldemo/lightning/lightning.out.js"></script>
+<script>
      $Lightning.use("c:LightningOutDemo", function() {
-        $Lightning.createComponent("c:appointmentFlow", {
+        $Lightning.createComponent("c:googleMapSearchLwc", {
             },
               "lwcApp",
               function(cmp) {
@@ -57,20 +57,33 @@
       );
 </script> -->
 
-
+<script src="https://vsdemo.force.com/customerportaldemo/lightning/lightning.out.js"></script>
 <script>
   $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
       function() {                  // Callback once framework and app load
-          $Lightning.createComponent(
-              "lightning:flow",    // top-level component of your app
-              { },    // attributes to set on the component when created
-              "lwcApp",    // the DOM location to insert the component
-              function(component) {            // API name of the Flow
-                  component.startFlow("runtime_appointmentbooking/Guest_Flow");
-              }
-          );
-      },    'https://vsdemo.force.com/customerportaldemo/'  // Community endpoint
+    //      $Lightning.createComponent(
+      //        "lightning:flow",    // top-level component of your app
+        //      { },    // attributes to set on the component when created
+          //    "lwcApp",    // the DOM location to insert the component
+            //  function(component) {            // API name of the Flow
+            //      component.startFlow("Inbound_New_Guest_Appointment_with_OTP_Screen");
+          //    }
+        //  );
+      },    'https://vsdemo.force.com/customerportaldemo'  // Community endpoint
   );
+
+  var hello = function() {
+    console.log('im clicked');                  // Callback once framework and app load
+    $Lightning.createComponent(
+        "lightning:flow",    // top-level component of your app
+        { },    // attributes to set on the component when created
+        "lwcApp",    // the DOM location to insert the component
+        function(component) {            // API name of the Flow
+            component.startFlow("Inbound_New_Guest_Appointment_with_OTP_Screen");
+        }
+    );
+}
+
 </script>
 
 
