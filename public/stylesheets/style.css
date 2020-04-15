@@ -26,3 +26,12 @@
   #auraErrorMessage {
     display: none !important;
   }
+
+  .slds-scope .slds-card__footer{
+    margin-right: 54rem !important; 
+    }
+
+    .slds-scope .slds-button_brand{
+      padding: 1rem 2rem 1rem 2rem !important;
+          font-size: 1.5rem !important;
+      }
