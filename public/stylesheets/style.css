@@ -35,3 +35,7 @@
       padding: 1rem 2rem 1rem 2rem !important;
           font-size: 1.5rem !important;
       }
+      .slds-scope .slds-button_neutral{
+        padding: 1rem 2rem 1rem 2rem !important;
+        font-size: 1.5rem !important;
+        }
