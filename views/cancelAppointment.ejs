@@ -25,10 +25,25 @@
       },    'https://vsdemo.force.com/customerportaldemo'  // Community endpoint
   );
 
-  
-
 </script>
 
+<!-- aura component as lightning out -->
+<!-- <script src="https://vsdemo.force.com/customerportaldemo/lightning/lightning.out.js"></script>
+<script>
+     $Lightning.use("c:LightningOutDemo", function() {
+        $Lightning.createComponent("c:appointmentFlow", {
+            },
+              "lwcApp",
+              function(cmp) {
+                console.log("LWC component was created");
+              
+                
+              }
+          );
+        },
+       'https://vsdemo.force.com/customerportaldemo'
+      );
+</script> -->
 </body>
 <% include partials/script %>
 </html>

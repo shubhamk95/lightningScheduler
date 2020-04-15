@@ -21,7 +21,7 @@
     </div>
   </div>
 </div>
-<div id="lwcApp"> <button class="btn btn-primary" onclick="hello()">Book Appointment</button></div>
+<div id="lwcApp"> </div>
 <!-- <script src="https://sksiscool-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
 <script>
      $Lightning.use("c:LightningOutDemo", function() {
@@ -72,8 +72,10 @@
       },    'https://vsdemo.force.com/customerportaldemo'  // Community endpoint
   );
 
-  var hello = function() {
-    console.log('im clicked');                  // Callback once framework and app load
+  var showAppointment = function(e) {
+    
+    console.log('im clicked');  
+    e.disabled = true;            // Callback once framework and app load
     $Lightning.createComponent(
         "lightning:flow",    // top-level component of your app
         { },    // attributes to set on the component when created
