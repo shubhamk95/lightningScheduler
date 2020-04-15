@@ -9,7 +9,7 @@
 <div class="container-fluid bg-3 text-center">    
   <h3><%= page %></h3><br>
 </div>
-<div id="lwcApp"></div>
+<div style="text-align: center;font-size: xx-large;" id="lwcApp"></div>
 <script src="https://vsdemo.force.com/customerportaldemo/lightning/lightning.out.js"></script>
 <script>
   $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
@@ -19,7 +19,7 @@
              { },    // attributes to set on the component when created
               "lwcApp",    // the DOM location to insert the component
               function(component) {            // API name of the Flow
-                  component.startFlow("Inbound_Cancel_Appointment_copy");
+                  component.startFlow("Inbound_Cancel_Appointment_Cmp");
              }
           );
       },    'https://vsdemo.force.com/customerportaldemo'  // Community endpoint
