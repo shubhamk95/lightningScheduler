@@ -8,18 +8,18 @@
 
 <div class="container-fluid bg-3 text-center">    
   <h3><%= page %></h3><br>
-  <!-- <div class="row">
+  <div id="imgContainer" class="row">
     <div class="col-sm-4">
-      <p>A website to test lightning out</p>
+      <img style="width: 300px;height:180px;" src="/img/coin1.jpg" alt="">
       
     </div>
     <div class="col-sm-4"> 
-      <p>A website to test lightning out</p>
+      <img style="width: 300px;height:180px;" src="/img/coin2.jpg" alt="">
     </div>
     <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <img style="width: 300px;height:180px;" src="/img/coin3.jpg" alt="">
     </div>
-  </div> -->
+  </div>
 </div>
 <div style="background-color: white;" id="lwcApp"> </div>
 <!-- <script src="https://sksiscool-dev-ed.lightning.force.com/lightning/lightning.out.js"></script>
@@ -73,7 +73,7 @@
   );
 
   var showAppointment = function(e) {
-    
+    document.getElementById('imgContainer').style.display = "none";
     console.log('im clicked');  
     e.disabled = true;            // Callback once framework and app load
     $Lightning.createComponent(
